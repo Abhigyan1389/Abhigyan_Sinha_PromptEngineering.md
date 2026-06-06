@@ -277,3 +277,14 @@ No baises were found
 Rephrased Prompt: "Describe a range of characteristics that support learning new technology, acknowledging that different people may succeed through different strengths and approaches."
 ### 4.3 Limitations & Responsible Use
 Limitations while working with LLM
+ 1.) Factual Accuracy
+ 2.) Reasoning Ability
+ 3.) Too much information makes it generic and not precise
+When should you verify outputs ?
+  i.) In case of highstake decisions
+  ii.) When current events and recent data is involved
+  iii.) When it comes to specific facts, stats and citations
+What tasks are LLMs NOT suitable for?
+   i.)   Realtime or live information
+   ii.)  Precise mathematical reasoning
+   iii.) Objective or unbiased judgement 
