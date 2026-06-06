@@ -173,9 +173,16 @@ Context Setting: The importance of context setting can be seen in below illustra
 Version                Context Provided                             Impact on Email        
 Competing Offer       Unexpected opportunity arose post-offer      Adds honesty & urgency; humanises the dilemma
 Adding a defined role to a prompt anchors the AI's language, vocabulary, and priorities to a specific professional identity, Layering in context setting takes this further by giving the AI a situational frame
-
 ## Part 2: Temperature & Parameter Control
 ### 2.1 Temperature Experimentation
+Prompt: Create a 3 sentences opening for a short story on cricket
+Temperature value: Low - 0.2, Medium - 0.8, High- 1
+Output: 
+Low:  The scoreboard read 247 for 9 when Rajan walked to the crease, needing 14 runs off the final over to win. He tapped his bat twice on the pitch, adjusted his gloves, and exhaled — a routine he had performed exactly the same way since he was twelve years old. The bowler marked his run-up, the fielders crept in, and the entire stadium fell into the particular silence that only cricket can produce.
+Medium:The morning air still carried the cool breath of dawn when Arjun took his place at the crease, bat steady in his calloused hands. Sixty thousand voices hummed around him like a living thing, the stands a riot of colour and noise that pressed against his chest from every direction. This was the final over, five runs needed, and every soul in the stadium knew that the weight of a nation had somehow come to rest on the shoulders of a seventeen-year-old boy from a dusty village in Rajasthan.
+High:  Cricket, someone once told Meera, is not a game but a negotiation between a man and his fate, conducted in white, under an indifferent sky. She had laughed then, seventeen and restless in the women's stand, not yet knowing that one afternoon in Nagpur would rewrite everything she thought she understood about patience, precision, and the strange geometry of loss. The ball, when it finally came for her brother, did not roar — it whispered, and that was somehow worse.
+Key Differences:
+The key differences are in the choice of words, the tone of the sentence and control of the words being used
 ### 2.2 Analysis & Recommendations
 
 ## Part 3: Strategic Prompting Techniques
