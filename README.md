@@ -164,7 +164,15 @@ V3	tailor make the campaign for digital and social The prompt has furthermore st
     media                                            the requirement                         in being more effective and                                                                                                productive hence making it
                                                                                              easier to achieve the
                                                                                              ultimate objective
-### 1.3 Role and Context Analysis                                                            
+### 1.3 Role and Context Analysis     
+**Scenario : Professional Email**
+Role Assignment: The importance of role assignment can be seen in below illustration
+Role                 Tone              Language Focus                             Unique Signal
+AVP – Banking       Measured & formal  Institutional respect, domain expertise   Mentions capital markets / risk management
+Context Setting: The importance of context setting can be seen in below illustration
+Version                Context Provided                             Impact on Email        
+Competing Offer       Unexpected opportunity arose post-offer      Adds honesty & urgency; humanises the dilemma
+Adding a defined role to a prompt anchors the AI's language, vocabulary, and priorities to a specific professional identity, Layering in context setting takes this further by giving the AI a situational frame
 
 ## Part 2: Temperature & Parameter Control
 ### 2.1 Temperature Experimentation
