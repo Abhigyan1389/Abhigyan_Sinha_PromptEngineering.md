@@ -200,12 +200,61 @@ Vivid imagery and atmosphere — the smell of the pitch, the roar of the crowd, 
 Narrative coherence and discipline — three sentences must land cleanly, with a clear character, setting, and tension, which requires control
 ## Part 3: Strategic Prompting Techniques
 ### 3.1 Chain-of-Thought Prompting
-Without chain of thought
+Without chain of thought:
 Prompt: A company has 150 employees. 60% work in engineering, 25% in sales, and the rest in operations. If the company plans to hire 20% more engineersand 10% more sales people, how many total employees will there be after hiring?
 Output:
-
+Current Breakdown:
+Engineering: 150 × 60% = 90 employees
+Sales: 150 × 25% = 37.5 → 38 employees
+Operations: 150 − 90 − 38 = 22 employees
+After Hiring:
+Engineering: 90 × 1.20 = 108 employees (+18)
+Sales: 38 × 1.10 = 41.8 → 42 employees (+4)
+Operations: 22 employees (unchanged)
+Total after hiring: 108 + 42 + 22 = 172 employees
+The company will grow from 150 → 172 employees (a net increase of 22 people, or ~14.7% overall growth).
+With chain of thought:
+Prompt: Let's solve this step by step:  A company has 150 employees. 60% work in engineering, 25% in sales, and the rest in operations. If the company plans to hire 20% more engineers and 10% more sales people, how many total employees will there be after hiring?
+Output:
+Step-by-Step Solution
+Step 1: Find current employees in each department
+DepartmentCalculationEmployeesEngineering150 × 60%90Sales150 × 25%37.5 ≈ 38Operations150 − 90 − 3822
+Step 2: Calculate new hires
+DepartmentCalculationNew HiresEngineering90 × 20%+18Sales38 × 10%+3.8 ≈ 4OperationsNo new hires+0
+Step 3: Find new department totals
+DepartmentBeforeAfterEngineering9090 + 18 = 108Sales3838 + 4 = 42Operations2222
+Step 4: Add it all up
+108+42+22=172108 + 42 + 22 = \boxed{172}108+42+22=172​
+✅ Final Answer: 172 total employees
+The company grows by 22 people (~14.7% overall increase) after the new hiring plan.
+Comparison: 
+The first response dove straight into the answer with minimal structure, while the second broke the problem into labeled steps with tables, making the logic easier to trace. Chain-of-thought prompting helps with complex reasoning because it forces the model to work through intermediate calculations explicitly rather than jumping to a conclusion, reducing the chance of arithmetic or logic errors along the way. However, a key limitation is that chain-of-thought doesn't guarantee correctness — the model can still make confident-sounding errors at any step, and a flawed early calculation will silently propagate through the rest of the reasoning chain.
 ### 3.2 Few-Shot Prompting
-
+Zero Shot Attempt:
+  i.) "The product arrived damaged and customer service was unhelpful." - Negative
+  ii.) "Works as expected, nothing special but does the job."- Neutral
+  iii.) "Absolutely love this! Best purchase I've made all year!"- Positive
+  iv.) "The quality is okay but slightly overpriced for what you get."- neutral
+  v.) "Terrible experience, would not recommend to anyone."- Negative
+Few-Shot Attempt:
+Review: "The product arrived damaged and customer service was unhelpful."
+Sentiment: Negative
+Review: "Works as expected, nothing special but does the job.
+Sentiment: Neutral
+Review: "Absolutely love this! Best purchase I've made all year!"
+Sentiment: Positive
+Review:  "The quality is okay but slightly overpriced for what you get.
+Sentiment: Neutral
+Review: "Terrible experience, would not recommend to anyone."
+Sentiment: Negative
+Analysis:
+Review #	Zero-Shot Result	Few-Shot Result	Correct Label	Improved?
+1			        Negative	     Negative         Negative      Yes
+2			        Neutral	       Neutral          Neutral       Yes
+3			        Positive	     Positive         Positive      Yes
+4			        Neutral        Neutral           Neutral      Yes
+5			        Negative	     Negative          Negative     Yes
+Few-shot prompting is most useful when the task involves nuanced or domain-specific patterns that are difficult to capture through definitions alone — such as detecting sarcasm, industry-specific tone, or borderline sentiment. It also excels when output format consistency matters, since examples naturally train the model to mirror a specific structure without lengthy formatting instructions. Finally, few-shot prompting is invaluable for edge cases and ambiguous inputs, where labeled examples act as guardrails that anchor the model's judgment and prevent it from drifting toward incorrect classifications.
 ## Part 4: Responsible AI & Limitations
 ### 4.1 Testing for Hallucinations
 ### 4.2 Testing for Bias
