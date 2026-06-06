@@ -184,9 +184,26 @@ High:  Cricket, someone once told Meera, is not a game but a negotiation between
 Key Differences:
 The key differences are in the choice of words, the tone of the sentence and control of the words being used
 ### 2.2 Analysis & Recommendations
-
+Here are 2 specific use cases where low temperature excels:
+1. Legal or Medical Document Summarisation
+When summarising a patient's diagnosis or a contract clause, you need the model to stay strictly faithful to the source material — no creative interpretation, no surprising word choices. Low temperature ensures the output is accurate, repeatable, and free from embellishment.
+2. Code Generation
+When asking Claude to write a function to sort an array or query a database, there is usually one correct answer. Low temperature keeps the model focused on the most reliable, conventional solution rather than experimenting with unconventional approaches that could introduce bugs.
+Here are 2 specific use cases where high temperature shines:
+1. Brainstorming Campaign Taglines
+When a marketing team needs 10 fresh taglines for a product launch, high temperature pushes the model beyond the obvious and into unexpected, memorable territory. The creative randomness is a feature — you want surprising angles, unusual metaphors, and ideas that wouldn't emerge from a predictable, low-temperature run.
+2. Fictional World-Building
+When crafting the lore, cultures, and history of an imaginary universe — say, a fantasy novel or a game setting — high temperature encourages the model to make bold, unexpected connections. It might invent a civilisation that worships eclipses, or a language built entirely around silence, ideas that a more "focused" model would never surface.
+Temperature 0.8 works best for this cricket story, and here's why:
+The story sits in a creative middle ground. It needs:
+Vivid imagery and atmosphere — the smell of the pitch, the roar of the crowd, the weight of the moment — which requires creative latitude
+Narrative coherence and discipline — three sentences must land cleanly, with a clear character, setting, and tension, which requires control
 ## Part 3: Strategic Prompting Techniques
 ### 3.1 Chain-of-Thought Prompting
+Without chain of thought
+Prompt: A company has 150 employees. 60% work in engineering, 25% in sales, and the rest in operations. If the company plans to hire 20% more engineersand 10% more sales people, how many total employees will there be after hiring?
+Output:
+
 ### 3.2 Few-Shot Prompting
 
 ## Part 4: Responsible AI & Limitations
